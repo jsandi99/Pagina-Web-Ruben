@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('bg.gif') repeat;
+    color: limegreen;
+    display: flex;
+    height: 100vh;
+}
+.wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(0, 128, 0, 0.1); /* Transparencia del 10% */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutíl */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px; /* Escala la imagen al 100% del ancho de la barra lateral */
+    height: 200px; /* Establece la altura igual al ancho */
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre completamente el espacio disponible */
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    margin-bottom: 5px;
+    color: limegreen; /* Color del texto verde */
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto de resaltado al pasar el ratón */
+    color: white;
+    cursor: pointer;
+}
+
+.logout-btn {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #555; /* Color grisáceo para el botón de cierre de sesión */
+    color: white;
+    text-decoration: none;
+    margin-top: auto; /* Ancla el botón al final de la barra lateral */
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #333; /* Cambio de color al pasar el ratón */
+    cursor: pointer;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('bg.gif') repeat;
+    color: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+}
+
+.spy-text {
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    max-width: 300px;
+    margin: auto;
+    text-align: center; /* Centra el texto en el contenedor */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 108%;
+    padding: 10px;
+    background-color: limegreen;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+button:hover {
+    background-color: darkgreen;
+}
