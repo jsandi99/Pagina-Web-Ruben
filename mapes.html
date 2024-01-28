@@ -14,14 +14,22 @@
                 <li><a href="principal.html">Inici</a></li>
                 <li><a href="mapes.html">Mapes</a></li>
                 <li><a href="factures.html">Factures</a></li>
-                <li><a href="informacio.html">Informació</a></li>
+                <li><a href="informacio.html">Video</a></li>
             </ul>
             <a href="index.html" class="logout-btn">Tanca Sessió</a>
         </nav>
-        <div class="content">
-            <h1>Mapes</h1>
-            <!-- Contenido de la página principal -->
+        <div id="imagen-container">
+            <img id="imagen" src="" alt="Imagen">
+            <div id="contador-container">
+                <div id="contador"></div>
+            </div>
+            <audio id="audioPlayer">
+                <source src="beep.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+              </audio>
         </div>
+        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

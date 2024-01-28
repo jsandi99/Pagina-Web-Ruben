@@ -7,15 +7,16 @@ body {
     display: flex;
     height: 100vh;
 }
+
 .wrapper {
     display: flex;
+    min-height: 100vh;
 }
 
 .sidebar {
     width: 200px;
-    height: 100vh;
-    background-color: rgba(0, 128, 0, 0.1); /* Transparencia del 10% */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra sutíl */
+    background-color: rgba(0, 128, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,9 +24,9 @@ body {
 }
 
 .logo {
-    width: 200px; /* Escala la imagen al 100% del ancho de la barra lateral */
-    height: 200px; /* Establece la altura igual al ancho */
-    object-fit: cover; /* Mantiene la relación de aspecto y cubre completamente el espacio disponible */
+    width: 200px;
+    max-height: 200px;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
@@ -47,12 +48,12 @@ body {
     background-color: transparent;
     border: 1px solid limegreen;
     margin-bottom: 5px;
-    color: limegreen; /* Color del texto verde */
-    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+    color: limegreen;
+    text-decoration: none;
 }
 
 .sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Efecto de resaltado al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
     color: white;
     cursor: pointer;
 }
@@ -61,19 +62,164 @@ body {
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background-color: #555; /* Color grisáceo para el botón de cierre de sesión */
+    background-color: #555;
     color: white;
     text-decoration: none;
-    margin-top: auto; /* Ancla el botón al final de la barra lateral */
+    margin-top: auto;
     transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #333; /* Cambio de color al pasar el ratón */
+    background-color: #333;
     cursor: pointer;
 }
 
 .content {
     flex-grow: 1;
     padding: 20px;
+    margin: auto;
 }
+
+.database-container {
+    border: 2px solid limegreen;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%; /* Adaptar al ancho de la página */
+}
+
+.database-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid limegreen;
+}
+
+.entry-id, .entry-title, .entry-amount {
+    flex: 1;
+}
+
+.entry-title {
+    margin: 0 200px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#showImageBtn {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    color: limegreen;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#showImageBtn, #centeredButton {
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 1px solid limegreen;
+    color: limegreen;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#imagen-container {
+    text-align: center;
+    position: relative;
+}
+
+#imagen {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#contador-container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#contador {
+    font-size: 18px;
+}
+
+.parpadeo {
+    animation: parpadeo 0.2s infinite alternate;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+#password {
+    max-height: 50px;
+}
+
+#centrar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#container {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
